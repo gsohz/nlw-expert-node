@@ -10,7 +10,7 @@ import { pollResults } from './ws/poll-results'
 const app = fastify()
 
 app.register(cookie, {
-  secret: 'duysag56AFDGADYGfsa67f67DF6sgshd7GD8G',
+  secret: process.env.COOKIE_SECRET,
   hook: 'onRequest'
 })
 
